@@ -1,0 +1,36 @@
+https://youtu.be/-ZAmE6-LDrA
+https://itvdn.com/ua/video/python-practice
+
+Активація віртуального середовища
+https://docs.python.org/uk/3/library/venv.html
+
+    pip list - список модулів
+    mkdir - створення папки
+    python --version   -  Перевіряємо версію python
+    pip freeze - список версій модулів
+    pip freeze >> requirements.txt - створюємо файл з залежностями
+    ls - перевірити вміст поточної директорії
+
+
+
+1. створюємо проект python
+
+2. pip install virtualenv
+
+3.  mkdir projects - створення папки
+
+4. python -m venv venv - створюємо віртуальне середовище
+
+5. PS D:\GitHub\Exchange_rates\projects\itvdn_course venv\Scripts\Activate.ps1   - Активуємо віртуальне середовище
+
+6. D:\GitHub\Exchange_rates\projects\itvdn_course> pip install requests
+ - встановлюємо request
+
+7.D:\GitHub\Exchange_rates\projects\itvdn_course> pip install peewee
+    - встановлюємо peewee
+
+8.D:\GitHub\Exchange_rates\projects\itvdn_course> pip install Flask
+    - встановлюємо Flask
+
+9.D:\GitHub\Exchange_rates\projects\itvdn_course> pip freeze >> requirements.txt
+    - створюємо файл з залежностями
