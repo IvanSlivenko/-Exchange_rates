@@ -20,9 +20,13 @@ exit() - вихід з інтерпритатора
 8. Підключаємо базу данних -
 D:\GitHub\Exchange_rates\projects\itvdn_course\venv\sqlite_tools\sqlite3 golden-eye.db
 
+///////////////////////////////////////////////////////////////////
 
+якщо не має sqlite3
 9. Скачуємо та розпаковуємо sqlite3
 10.Запускаємо sqlite3 за допомогою повного шляху
+
+///////////////////////////////////////////////////////////////////
 
 
 11.q = models.XRate.select()
@@ -31,19 +35,28 @@ D:\GitHub\Exchange_rates\projects\itvdn_course\venv\sqlite_tools\sqlite3 golden-
 13. list(q) - перетворюємо select об'єкт у список
 14. Отримуємо перший об'єкт у списку - q.first()
 15. Отримуємо довжину списку - len(q)
-16. models.XRate.create(from_currency=980, to_currency=840, rate=25) - Створюємо
-    перший запис у таблиці
-17.
+16. Створюємо перший запис у таблиці - спосіб № 1
+    models.XRate.create(from_currency=980, to_currency=840, rate=25)
+
+17. Читаємо базу данних
+    >>> q = models.XRate.select()
+    >>> xrate = q.first()
+    >>> xrate.from_currency
+
+18. Створюємо запис у таблиці - спосіб № 2
+    >>> new_rate = models.XRate(from_currency = 643, to_currency = 840, rate = 45)
+    >>> new_rate.rate = 45.0
+    >>> new_rate.save() # Зберігаємо записи в базі данних
+
+19. Отримуємо перший запис з бази данних
+    >>> rate_1 = models.XRate.select().where(models.XRate.id == 1).first()
+    >>> rate_1.id
+
+20. Вносимо зміни у перший запис
+    >>> rate_1.rate = 31
+    >>> rate_1.save()
 
 
 
+43 : 51
 
-
-
-
-
-
-
-37 : 26
-
-35 : 56 actuality
